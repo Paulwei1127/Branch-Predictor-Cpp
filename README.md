@@ -18,15 +18,15 @@
 -   **動態預測**\
     每個 Entry 維護 `History` 與 `State`，會依據執行結果即時更新。
 
--   **2-bit 狀態機**\
-    每個 Entry 具有四種狀態：
+- 	**2-bit 狀態機**
+	每個 Entry 具有四種狀態：
 
-      狀態   代號   說明
-      ------ ------ --------------------
-      0      SN     Strongly Not Taken
-      1      WN     Weakly Not Taken
-      2      WT     Weakly Taken
-      3      ST     Strongly Taken
+	  | 狀態 | 代號 | 說明 |
+	  | :---: | :---: | :--- |
+	  | 0 | SN | Strongly Not Taken |
+	  | 1 | WN | Weakly Not Taken |
+	  | 2 | WT | Weakly Taken |
+	  | 3 | ST | Strongly Taken |
 
 -   **可自訂 Entry 數量**\
     支援 2、4、8、16 個 Entry（需為偶數）。
@@ -54,7 +54,7 @@ g++ HisPred.cpp -o branch_predictor
 
 ### 執行方式
 
-1.  確保 `input.txt` 與執行檔位於相同目錄。\
+1.  確保 `input.txt` 與執行檔位於相同目錄。
 2.  執行程式：
 
 ``` bash
@@ -87,7 +87,7 @@ g++ HisPred.cpp -o branch_predictor
 
 2.  **必須包含標籤**
 
-    -   `Loop:` --- 迴圈開始\
+    -   `Loop:` --- 迴圈開始
     -   `End:` --- 程式結束
 
 3.  **僅支援指令**
@@ -138,10 +138,10 @@ g++ HisPred.cpp -o branch_predictor
 
 欄位說明：
 
--   **entry**：對應的 BHT Entry 索引\
--   **History / State 列表**：例如 `(000, SN SN SN ... )`\
--   **Outcome**：實際執行結果（T/N）\
--   **Prediction**：預測結果\
+-   **entry**：對應的 BHT Entry 索引
+-   **History / State 列表**：例如 `(000, SN SN SN ... )`
+-   **Outcome**：實際執行結果（T/N）
+-   **Prediction**：預測結果
 -   **Result**：correct 或 miss
 
 ------------------------------------------------------------------------
